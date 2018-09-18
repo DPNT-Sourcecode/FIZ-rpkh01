@@ -22,7 +22,7 @@ public class HelloSolutionTest {
 		assertThat(result,equalTo("Hello, justAName!") );
 	}
 	
-	@Test
+	@Test(expected = NullPointerException.class)
 	public void helloTestNullValue() {
 		String result = classToBeTested.hello(null);
 		assertThat(result,equalTo("Hello, World!") );
