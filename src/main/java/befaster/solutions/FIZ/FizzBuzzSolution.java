@@ -9,7 +9,6 @@ public class FizzBuzzSolution {
 
 	public String fizzBuzz(Integer number) {
 		StringBuilder builder = new StringBuilder();
-		Boolean deluxe = false;
 		String result;
 
 		if (number % 3 == 0 || number.toString().contains("3")) {
@@ -18,19 +17,11 @@ public class FizzBuzzSolution {
 		if (number % 5 == 0 || number.toString().contains("5")) {
 			builder.append("buzz ");
 		}
-		if (number % 3 == 0 && number.toString().contains("3")) {
+		if ((number % 3 == 0 && number.toString().contains("3"))  || (number % 5 == 0 && number.toString().contains("5"))) {
 			if (checkOdd(number)) {
 				builder.append("fake ");
 			}
 			builder.append("deluxe");
-			deluxe = true;
-		}
-		if (number % 5 == 0 && number.toString().contains("5")) {
-			if (checkOdd(number)) {
-				builder.append("fake ");
-			}
-			builder.append("deluxe");
-			deluxe = true;
 		}
 		if (builder.length() == 0) {
 			result = number.toString();
@@ -44,16 +35,5 @@ public class FizzBuzzSolution {
 		return (number % 2 != 0);
 	}
 
-	private Boolean checkFakeDeluxe(Integer number) {
-		char[] stringNumber = number.toString().toCharArray();
-		Map<String, Integer> map = new HashMap<>();
-		if (number % 2 != 0) {
-			for (int i = 0; i < stringNumber.length; i++) {
-				char letter = stringNumber[i];
-				map.put(letter + "", 1);
-			}
-		}
-		return map.size() == 1;
-	}
 
 }
