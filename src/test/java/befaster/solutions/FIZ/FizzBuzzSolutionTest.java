@@ -1,6 +1,7 @@
 package befaster.solutions.FIZ;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -17,6 +18,31 @@ public class FizzBuzzSolutionTest {
 	
 	@Test
 	public void functionTestFizz(){
-		assertThat(classToBeTested.fizzBuzz(3),equals("fizz"));
+		String result = classToBeTested.fizzBuzz(3);
+		assertTrue(result.equals("fizz"));
+	}
+	
+	
+	@Test
+	public void functionTestBuzz(){
+		String result = classToBeTested.fizzBuzz(5);
+		assertTrue(result.equals("buzz"));
+	}
+	
+
+	
+	
+	@Test
+	public void functionTestNumber(){
+		String result = classToBeTested.fizzBuzz(7);
+		assertTrue(result.equals("7"));
+	}
+
+	
+	
+	@Test
+	public void functionTestFizzBuzz(){
+		String result = classToBeTested.fizzBuzz(15);
+		assertTrue(result.equals("fizz buzz"));
 	}
 }
