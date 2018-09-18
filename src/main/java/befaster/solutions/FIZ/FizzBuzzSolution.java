@@ -19,10 +19,10 @@ public class FizzBuzzSolution {
     		builder.append("buzz ");    		
     	}
     	if (number % 3 == 0 && number.toString().contains("3")) {
-    		deluxe = true;
+    		builder.append("deluxe");    		
     	}
     	if (number % 5 == 0 && number.toString().contains("5")) {
-    		deluxe = true;	
+    		builder.append("deluxe");  
     	}
     	if (number > 10 && checkDeluxe(number)) {
     		if (number % 2 != 0) {
