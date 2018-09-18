@@ -17,7 +17,7 @@ public class FizzBuzzSolution {
     		builder.append("buzz ");    		
     	}
     	if (number > 10 && checkDeluxe(number)) {
-    		builder.append("buzz");    		
+    		builder.append("deluxe");    		
     	}
     	if(builder.length() == 0) {
     		result = number.toString();

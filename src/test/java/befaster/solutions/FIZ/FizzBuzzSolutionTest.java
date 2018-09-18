@@ -71,4 +71,11 @@ public class FizzBuzzSolutionTest {
 		String result = classToBeTested.fizzBuzz(44);
 		assertTrue(result.equals("deluxe"));
 	}
+	
+
+	@Test
+	public void functionTestDeluxeMinor10(){
+		String result = classToBeTested.fizzBuzz(8);
+		assertTrue(result.equals("8"));
+	}
 }
