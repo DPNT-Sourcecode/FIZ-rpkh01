@@ -19,7 +19,7 @@ public class HelloSolutionTest {
 	@Test
 	public void helloTest() {
 		String result = classToBeTested.hello("justAName");
-		assertThat(result,equalTo("Hello justAName") );
+		assertThat(result,equalTo("Hello ") );
 	}
 
 }
