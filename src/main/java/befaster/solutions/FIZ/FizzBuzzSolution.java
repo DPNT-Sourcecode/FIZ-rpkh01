@@ -26,10 +26,9 @@ public class FizzBuzzSolution {
     		builder.append("deluxe");  
     		deluxe = true;
     	}
-    	if (number > 10 && !deluxe && checkFakeDeluxe(number)) {
-    		if (number % 2 != 0) {
+    	if (!deluxe && checkFakeDeluxe(number)) {    		
     			builder.append("fake deluxe");
-    		}   		
+    		   		
     	}
     	if(builder.length() == 0) {
     		result = number.toString();
@@ -42,9 +41,11 @@ public class FizzBuzzSolution {
     private Boolean checkFakeDeluxe(Integer number) {
     	char[] stringNumber  = number.toString().toCharArray();
     	Map<String,Integer> map = new HashMap<>();
-    	for (int i=0; i < stringNumber.length ; i++) {
-    		char letter = stringNumber[i];
-    		map.put(letter + "", 1);
+    	if (number % 2 != 0) {
+	    	for (int i=0; i < stringNumber.length ; i++) {
+	    		char letter = stringNumber[i];
+	    		map.put(letter + "", 1);
+	    	}
     	}
     	return map.size() == 1;
     }

@@ -86,5 +86,16 @@ public class FizzBuzzSolutionTest {
 		String result = classToBeTested.fizzBuzz(33);
 		assertTrue(result.equals("fake deluxe"));
 	}
+	
+	@Test
+	public void functionTestFizzFakeDeluxe(){
+		String result = classToBeTested.fizzBuzz(237);
+		assertTrue(result.equals("fizz fake deluxe"));
+		String result2 = classToBeTested.fizzBuzz(3);
+		assertTrue(result2.equals("fizz fake deluxe"));
+		String result3 = classToBeTested.fizzBuzz(33);
+		assertTrue(result3.equals("fizz fake deluxe"));
+	}
+	
 
 }
