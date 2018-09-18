@@ -9,7 +9,6 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
     	StringBuilder builder = new StringBuilder();
-    	Boolean deluxe = false;
     	String result;
     	
     	if (number % 3 == 0 || number.toString().contains("3")) {
@@ -26,7 +25,7 @@ public class FizzBuzzSolution {
     	}
     	if (number > 10 && checkDeluxe(number)) {
     		if (number % 2 != 0) {
-    			builder.append("fake deluxe");
+    			builder = new StringBuilder("fake deluxe");
     		}   		
     	}
     	if(builder.length() == 0) {
