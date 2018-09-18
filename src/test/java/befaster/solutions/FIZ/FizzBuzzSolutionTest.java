@@ -22,10 +22,22 @@ public class FizzBuzzSolutionTest {
 		assertTrue(result.equals("fizz"));
 	}
 	
+
+	@Test
+	public void functionTestFizz2(){
+		String result = classToBeTested.fizzBuzz(23);
+		assertTrue(result.equals("fizz"));
+	}
+	
 	
 	@Test
 	public void functionTestBuzz(){
 		String result = classToBeTested.fizzBuzz(5);
+		assertTrue(result.equals("buzz"));
+	}
+	@Test
+	public void functionTestBuzz2(){
+		String result = classToBeTested.fizzBuzz(51);
 		assertTrue(result.equals("buzz"));
 	}
 	
