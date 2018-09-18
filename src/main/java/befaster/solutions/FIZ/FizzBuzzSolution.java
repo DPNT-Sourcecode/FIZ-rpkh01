@@ -9,6 +9,7 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
     	StringBuilder builder = new StringBuilder();
+    	Boolean deluxe = false;
     	String result;
     	
     	if (number % 3 == 0 || number.toString().contains("3")) {
@@ -18,14 +19,16 @@ public class FizzBuzzSolution {
     		builder.append("buzz ");    		
     	}
     	if (number % 3 == 0 && number.toString().contains("3")) {
-    		builder.append("deluxe");    		
+    		builder.append("deluxe");
+    		deluxe = true;
     	}
     	if (number % 5 == 0 && number.toString().contains("5")) {
     		builder.append("deluxe");  
+    		deluxe = true;
     	}
-    	if (number > 10 && checkDeluxe(number)) {
+    	if (number > 10 && !deluxe && checkFakeDeluxe(number)) {
     		if (number % 2 != 0) {
-    			builder = new StringBuilder("fake deluxe");
+    			builder.append("fake deluxe");
     		}   		
     	}
     	if(builder.length() == 0) {
@@ -36,7 +39,7 @@ public class FizzBuzzSolution {
     	return result;
     }
     
-    private Boolean checkDeluxe(Integer number) {
+    private Boolean checkFakeDeluxe(Integer number) {
     	char[] stringNumber  = number.toString().toCharArray();
     	Map<String,Integer> map = new HashMap<>();
     	for (int i=0; i < stringNumber.length ; i++) {
