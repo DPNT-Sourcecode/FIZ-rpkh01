@@ -17,6 +17,9 @@ public class FizzBuzzSolution {
     		builder.append("buzz ");    		
     	}
     	if (number > 10 && checkDeluxe(number)) {
+    		if (number % 2 != 0) {
+    			builder.append("fake ");
+    		}
     		builder.append("deluxe");    		
     	}
     	if(builder.length() == 0) {
