@@ -29,6 +29,8 @@ public class FizzBuzzSolutionTest {
 	}
 	
 	
+	
+	
 	@Test
 	public void functionTestBuzz(){
 		String result = classToBeTested.fizzBuzz(5);
@@ -77,5 +79,12 @@ public class FizzBuzzSolutionTest {
 		assertTrue(result.equals("fake deluxe"));
 	}
 	
+	
+
+	@Test
+	public void functionTestFizzDeluxe(){
+		String result = classToBeTested.fizzBuzz(23);
+		assertTrue(result.equals("fizz deluxe"));
+	}
 
 }
