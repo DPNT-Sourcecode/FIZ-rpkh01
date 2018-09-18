@@ -1,6 +1,5 @@
 package befaster.solutions.FIZ;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
