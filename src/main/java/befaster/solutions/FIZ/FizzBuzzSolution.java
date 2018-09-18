@@ -1,10 +1,5 @@
 package befaster.solutions.FIZ;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import befaster.runner.SolutionNotImplementedException;
-
 public class FizzBuzzSolution {
 
 	public String fizzBuzz(Integer number) {
