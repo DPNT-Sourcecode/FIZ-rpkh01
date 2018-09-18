@@ -18,17 +18,17 @@ public class FizzBuzzSolution {
     	if (number % 5 == 0 || number.toString().contains("5")) {
     		builder.append("buzz ");    		
     	}
+    	if (checkOdd(number)) {    		
+    		builder.append("fake ");    		   		
+    	}
     	if (number % 3 == 0 && number.toString().contains("3")) {
+    		if (number % 2 != 0) {
     		builder.append("deluxe");
     		deluxe = true;
     	}
     	if (number % 5 == 0 && number.toString().contains("5")) {
     		builder.append("deluxe");  
     		deluxe = true;
-    	}
-    	if (!deluxe && checkFakeDeluxe(number)) {    		
-    			builder.append("fake deluxe");
-    		   		
     	}
     	if(builder.length() == 0) {
     		result = number.toString();
@@ -37,6 +37,10 @@ public class FizzBuzzSolution {
     	}
     	return result;
     }
+    	
+    	private Boolean checkOdd(Integer number) {
+    		return (number % 2 != 0);
+    	}
     
     private Boolean checkFakeDeluxe(Integer number) {
     	char[] stringNumber  = number.toString().toCharArray();
