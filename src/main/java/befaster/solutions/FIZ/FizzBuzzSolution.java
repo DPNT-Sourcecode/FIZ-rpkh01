@@ -9,18 +9,20 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
     	StringBuilder builder = new StringBuilder();
+    	Boolean deluxe = false;
     	String result;
-    	if (number % 3 == 0 && number.toString().contains("3")) {
-    		builder.append("fizz deluxe");
-    	}
-    	if (number % 5 == 0 && number.toString().contains("5")) {
-    		builder.append("buzz deluxe");    		
-    	}
+    	
     	if (number % 3 == 0 || number.toString().contains("3")) {
     		builder.append("fizz ");
     	}
     	if (number % 5 == 0 || number.toString().contains("5")) {
     		builder.append("buzz ");    		
+    	}
+    	if (number % 3 == 0 && number.toString().contains("3")) {
+    		deluxe = true;
+    	}
+    	if (number % 5 == 0 && number.toString().contains("5")) {
+    		deluxe = true;	
     	}
     	if (number > 10 && checkDeluxe(number)) {
     		if (number % 2 != 0) {
