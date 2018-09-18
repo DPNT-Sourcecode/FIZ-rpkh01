@@ -64,4 +64,11 @@ public class FizzBuzzSolutionTest {
 		String result = classToBeTested.fizzBuzz(51);
 		assertTrue(result.equals("fizz buzz"));
 	}
+	
+
+	@Test
+	public void functionTestDeluxe(){
+		String result = classToBeTested.fizzBuzz(44);
+		assertTrue(result.equals("deluxe"));
+	}
 }

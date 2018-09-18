@@ -28,10 +28,13 @@ public class FizzBuzzSolution {
     }
     
     private Boolean checkDeluxe(Integer number) {
-    	
-    	Map<CharSequence,Integer> map = new HashMap<>();
-    	for parameter.in
-//    	chars().forEach( map.put(i, 1));
+    	char[] stringNumber  = number.toString().toCharArray();
+    	Map<String,Integer> map = new HashMap<>();
+    	for (int i=0; i < stringNumber.length ; i++) {
+    		char letter = stringNumber[i];
+    		map.put(letter + "", 1);
+    	}
+    	return map.size() == 1;
     }
 
 }
